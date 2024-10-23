@@ -1,0 +1,144 @@
+:root {
+    /* Colors */
+    --primary-clr: #009dffe0; /*edit these line to change color */
+    --text-clr: #ffffff;
+    --text-clr-2: #555555;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto"; /* edit these to change font style */
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Nav Styles */
+nav, .nav__links {
+    display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 15vh;
+    box-shadow: 0 5px 5px 0 beige;
+    background-color: var(--primary-clr);
+}
+
+.nav__links {
+    gap: 2.1rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.nav__links a {
+    color: var(--text-clr);
+    position: relative;
+    width: max-content;
+    padding-bottom: 3.8px;
+}
+
+.nav__links a::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    background: linear-gradient(to right, var(--text-clr), var(--primary-clr));
+    bottom: 0;
+    left: 0;
+    border-radius: 100px;
+    transition: 100ms;
+}
+
+.nav__links a:hover::after {
+    width: 0;
+}
+
+.logo {
+    font-style: italic;
+    font-size: 2rem;
+    color: var(--text-clr);
+}
+
+/* section */
+#hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#hero__img {
+    width: 400px;
+    height: 400px;
+    background-image: url(/images/profile.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#hero__text h1 {
+    color: var(--primary-clr);
+    font-size: 3rem;
+}
+
+#hero__text {
+    color: var(--text-clr-2);
+}
+
+#skills {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill__text__m {
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: italic;
+    color: var(--primary-clr);
+    position: relative;
+    width: max-content;
+    margin: 10px 0;
+}
+
+.skill__text__m::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    background: linear-gradient(to right, var(--text-clr), var(--primary-clr));
+    bottom: 0;
+    left: 0;
+}
+
+.skill__show {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.skill__panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 15px;
+}
+
+.skill__img img {
+    width: 50px;
+}
